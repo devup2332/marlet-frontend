@@ -6,7 +6,8 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./banner.component.scss'],
 })
 export class BannerComponent implements OnInit {
-  @ViewChild('banner_c_h_c', { static: true }) bannerHTML: ElementRef<HTMLDivElement>;
+  @ViewChild('banner_c_h_c', { static: true })
+  bannerHTML: ElementRef<HTMLDivElement>;
   @ViewChild('nav', { static: true }) navHTML: ElementRef<HTMLDivElement>;
 
   constructor() {}
@@ -16,9 +17,8 @@ export class BannerComponent implements OnInit {
     this.activeHeader();
   }
 
-  setLinksHeaderStyles () :void {
+  setLinksHeaderStyles(): void {
     const bannerHeight = this.bannerHTML.nativeElement.clientHeight;
-    const aboutHeight = document.querySelector('.about_c_h_c').clientHeight;
 
     if (
       document.documentElement.scrollTop >= 0 &&
@@ -30,6 +30,8 @@ export class BannerComponent implements OnInit {
     }
 
     document.addEventListener('scroll', () => {
+      const bannerHeight = this.bannerHTML.nativeElement.clientHeight;
+      const aboutHeight = document.querySelector('.about_c_h_c').clientHeight;
       if (
         document.documentElement.scrollTop >= 0 &&
         document.documentElement.scrollTop < bannerHeight - 200
@@ -58,18 +60,24 @@ export class BannerComponent implements OnInit {
     });
   }
 
-  activeHeader ():void {
+  activeHeader(): void {
     const header = this.bannerHTML.nativeElement.children[0];
 
     document.addEventListener('scroll', () => {
-      if(document.documentElement.scrollTop > 100) {
+      if (document.documentElement.scrollTop > 100) {
         header.classList.add('active');
-        header.children[0].children[0].children[0].setAttribute('src','assets/icons/logo-light.svg')
-      }else {
-        header.classList.remove('active')
-        header.children[0].children[0].children[0].setAttribute('src','assets/icons/logo-dark.svg')
+        header.children[0].children[0].children[0].setAttribute(
+          'src',
+          'assets/icons/logo-light.svg'
+        );
+      } else {
+        header.classList.remove('active');
+        header.children[0].children[0].children[0].setAttribute(
+          'src',
+          'assets/icons/logo-dark.svg'
+        );
       }
-    })
+    });
   }
 
   openNav(nav: HTMLDivElement, btn: HTMLButtonElement) {

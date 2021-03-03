@@ -2,7 +2,7 @@
 
 .about_c_h_c {
     font-family: $font_2;
-    padding: 60px 0px;
+    padding: 60px 0px 0px 0px;
     color: $color_1;
 
     .container {
@@ -75,6 +75,8 @@
 
 @media (min-width:768px) {
     .about_c_h_c {
+        padding: 100px 0px 0px 0px;
+
         .container {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -186,4 +188,12 @@
     }
 }
 
-
+@media (min-width:1600px) {
+    .about_c_h_c {
+        .container {
+            .title_about {
+                font-size: 50px;
+            }
+        }
+    }
+}

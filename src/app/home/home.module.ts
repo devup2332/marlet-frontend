@@ -5,10 +5,11 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { AboutComponent } from './components/about/about.component';
+import { GalleryImagesComponent } from './components/gallery-images/gallery-images.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, AboutComponent],
+  declarations: [HomeComponent, BannerComponent, AboutComponent, GalleryImagesComponent],
   imports: [
     CommonModule,
     HomeRoutingModule
