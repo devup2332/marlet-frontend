@@ -1,0 +1,189 @@
+@import 'fonts.scss','colors.scss';
+
+.about_c_h_c {
+    font-family: $font_2;
+    padding: 60px 0px;
+    color: $color_1;
+
+    .container {
+        width: 90%;
+        margin: auto;
+
+        .title_about {
+            text-align: center;
+            font-size: 23px;
+            border-bottom: 3px solid $color_1;
+            padding-bottom: 5px;
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+        }
+    
+        .description_about {
+            text-align: center;
+            font-size: 12px;
+            line-height: 20px;
+            margin-top: 15px;
+        }
+    
+        .image_containter {
+            width: 245px;
+            height: 245px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 40px auto 0px auto;
+            box-shadow: 0px 5px 30px 10px rgba($color: #000000, $alpha: .5);
+    
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    
+        .button_about {
+            background-color: $color_1;
+            border: none;
+            width: 135px;
+            height: 35px;
+            border-radius: 10px;
+            color: $color_4;
+            display: block;
+            outline: none;
+            font-weight: bolder;
+            font-family: $font_2;
+            box-shadow: 0px 5px 10px 0px rgba($color: #000000, $alpha: .5);
+            margin: 40px auto 0px auto;
+            cursor: pointer;
+            transition: background-color .3s ease, color .3s ease;
+    
+            &:hover {
+                background-color: $color_3;
+                color: $color_1;
+            }
+        }
+    }
+}
+
+@media (min-width:540px) {
+    .about_c_h_c {
+        .container {
+            width: 85%;
+        }
+    }
+}
+
+@media (min-width:768px) {
+    .about_c_h_c {
+        .container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+
+            .title_about {
+                justify-self: start;
+                margin: unset;
+                
+            }
+
+            .description_about {
+                margin-top: 20px;
+                text-align: left;
+                width: 90%;
+            }
+
+            .image_containter {
+                grid-column: 2 / 3;
+                grid-row: 1 / 4;
+                align-self: center;
+                justify-content: end;
+                margin-top: 0px;
+            }
+
+            .button_about {
+                margin: 20px 0px 0px 0px;
+                font-size: 15px;
+                width: 150px;
+            }
+        }
+    }
+}
+
+@media (min-width:950px) {
+    .about_c_h_c {
+        .container {
+            .title_about {
+                font-size: 30px;
+                align-self: flex-end;
+            }
+
+            .description_about {
+                font-size: 12px;
+                margin-top: 30px;
+                width: 80%;
+            }
+
+            .image_containter {
+                width: 350px;
+                height: 350px;
+            }
+
+            .button_about {
+                margin-top: -35px;
+            }
+        }
+    }
+}
+
+@media (min-width:1100px) {
+    .about_c_h_c {
+        .container {
+            .description_about {
+                font-size: 15px;
+                line-height: 25px;
+            }
+
+            .button_about {
+                width: 180px;
+                height: 40px;
+                font-size: 17px;
+                margin-top: 0px;
+            }
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .about_c_h_c {
+        .container {
+            width: 75%;
+            max-width: 1200px;
+
+            .title_about {
+                font-size: 40px;
+                text-align: left;
+                align-self: end;
+            }
+
+            .description_about {
+                font-size: 15px;
+                width: 90%;
+                max-width: 485px;
+            }
+
+            .image_containter {
+                width: 500px;
+                height: 500px;
+            }
+
+            .button_about {
+                width: 210px;
+                height: 45px;
+                font-size: 20px;
+                align-self: start;
+                margin-top: -45px;
+            }
+        }
+    }
+}
+
+
