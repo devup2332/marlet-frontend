@@ -1,3 +1,5 @@
+@import 'fonts.scss','colors.scss';
+
 $height_main_image: 400px;
 $height_single_images: 160px;
 
@@ -7,11 +9,49 @@ $height_single_images: 160px;
 
     .image_container {
         height: $height_single_images;
+        position: relative;
 
         img {
             object-fit: cover;
             width: 100%;
             height: 100%;
+        }
+
+        .img_hover_text {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .35);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity .3s ease, visibility .3s ease;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+
+            span {
+                display: block;
+                font-family: $font_2;
+                color: $color_1;
+                margin-top: 10px;
+                font-size: 13px;
+            }
+        }
+
+        &:hover {
+            .img_hover_text {
+                opacity: 1;
+                visibility: visible;
+            }
         }
     }
 
@@ -19,6 +59,13 @@ $height_single_images: 160px;
         grid-column: 1 / 3;
         height: 100%;
         max-height: $height_main_image;
+
+        .img_hover_text {
+            img {
+                width: 50px;
+                height: 50px;
+            }
+        }
     }
 }
 
@@ -65,7 +112,13 @@ $height_single_images: 160px;
     .gallery_images_c_h_c {
 
         .image_container {
-            height: $height_main_image / 2; 
+            height: $height_main_image / 2;
+
+            .img_hover_text {
+                span {
+                    font-size: 15px;
+                }
+            }
         }
         
         .image_container.main {
@@ -81,6 +134,13 @@ $height_single_images: 160px;
 
         .image_container {
             height: $height_main_image / 2; 
+
+            .img_hover_text {
+                span {
+                    font-size: 17px;
+                }
+
+            }
         }
         
         
@@ -97,6 +157,13 @@ $height_single_images: 160px;
 
         .image_container {
             height: $height_main_image / 2; 
+            
+            .img_hover_text {
+                img {
+                    width: 50px;
+                    height: 50px;
+                }
+            }
         }
         
         

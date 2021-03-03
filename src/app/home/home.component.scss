@@ -1,6 +1,6 @@
 @import 'colors.scss','fonts.scss';
 
-.container_about_title {
+.container_about_and_gallery_title {
     background: linear-gradient($color_4,#000000);
     padding-bottom: 20px;
 
@@ -33,7 +33,7 @@
 }
 
 @media(min-width: 540px) {
-    .container_about_title {
+    .container_about_and_gallery_title {
         .container {
             width: 85%;
 
@@ -52,7 +52,9 @@
 
 @media(min-width: 950px) {
     .container_about_title {
+
         .container {
+
             .title_gallery {
                 font-size: 30px;
             }
@@ -65,7 +67,8 @@
 }
 
 @media(min-width: 1100px) {
-    .container_about_title {
+    .container_about_and_gallery_title{
+
         .container {
 
             .description_gallery {
@@ -78,10 +81,13 @@
 }
 
 @media(min-width: 1400px) {
-    .container_about_title {
+    .container_about_and_gallery_title {
+        padding-bottom: 70px;
+
         .container {
             width: 75%;
             max-width: 1200px;
+
             .title_gallery {
                 font-size: 40px;
             }
@@ -90,9 +96,9 @@
 } 
 
 @media(min-width: 1600px) {
-    .container_about_title {
+    .container_about_and_gallery_title {
+        
         .container {
-
             .title_gallery {
                 font-size: 50px;
             }
