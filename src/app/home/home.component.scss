@@ -32,6 +32,10 @@
     }
 }
 
+.container_products_contact {
+    background: linear-gradient(#000000,$color_4);
+}
+
 @media(min-width: 540px) {
     .container_about_and_gallery_title {
         .container {
@@ -45,13 +49,13 @@
 }
 
 @media(min-width: 768px) {
-    .container_about_title {
+    .container_about_and_gallery_title {
         padding-bottom: 40px;
     }
 }
 
 @media(min-width: 950px) {
-    .container_about_title {
+    .container_about_and_gallery_title {
 
         .container {
 

@@ -10,6 +10,7 @@ $height_single_images: 160px;
     .image_container {
         height: $height_single_images;
         position: relative;
+        overflow: hidden;
 
         img {
             object-fit: cover;

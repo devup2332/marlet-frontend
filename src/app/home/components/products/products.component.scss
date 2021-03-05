@@ -1,0 +1,273 @@
+@import "colors.scss", "fonts.scss";
+
+.products_c_h_c {
+  font-family: $font_2;
+  padding-top: 60px;
+  .title_products {
+    color: $color_1;
+    font-weight: bold;
+    text-align: center;
+    font-size: 23px;
+    padding-bottom: 5px;
+    border-bottom: 3px solid $color_1;
+    width: fit-content;
+    margin: auto;
+  }
+
+  .description_products {
+    color: $color_1;
+    text-align: center;
+    font-size: 12px;
+    margin: 15px auto 0px auto;
+    width: 90%;
+    line-height: 20px;
+  }
+
+  .container_boxes {
+    width: 67%;
+    
+    margin: 35px auto 0px auto;
+    display: grid;
+    justify-content: center;
+    gap: 30px;
+
+    .box {
+      background-color: $color_1;
+      border-radius: 10px;
+      padding: 25px 25px 47px 25px;
+      display: grid;
+      gap: 25px;
+      max-width: 255px;
+      justify-items: center;
+      box-shadow: 0px 5px 5px 0px rgba($color: #000000, $alpha: 0.5);
+
+      .img_container {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .text_box {
+        display: grid;
+        gap: 10px;
+        .title_box {
+          text-align: center;
+          font-size: 15px;
+          color: $color_3;
+          font-weight: bold;
+        }
+
+        .prices_box {
+          display: grid;
+          gap: 10px;
+          p {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+              font-size: 12px;
+              &:nth-child(3) {
+                color: $color_3;
+                font-weight: bolder;
+              }
+            }
+          }
+        }
+
+        .btn_box {
+          width: 147px;
+          cursor: pointer;
+          height: 35px;
+          background-color: $color_3;
+          border-radius: 10px;
+          outline: none;
+          border: none;
+          color: $color_1;
+          font-weight: bold;
+          margin: auto;
+          font-family: $font_2;
+          box-shadow: 0px 5px 5px 0px rgba($color: $color_3, $alpha: 0.5);
+          transition: color .3s ease, background-color .3s ease;
+
+          &:hover {
+              background-color: $color_1;
+              color: $color_3;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width:700px) {
+    .products_c_h_c {
+
+        .description_products {
+            width: 82%;
+        }
+        .container_boxes {
+            grid-template-columns: 1fr 1fr;
+            width: 75%;
+            gap: 30px 50px;
+            margin: 40px auto 0px auto;
+
+            .box {
+                justify-self: center;
+                max-width: unset;
+                width: 245px;
+
+                .text_box {
+                    gap: 20px;
+
+                    .prices_box {
+                        p {
+                            span {
+                                &:nth-child(3) {
+                                    font-size: 15px;
+                                }
+                            }
+                        }
+                    }
+                    .btn_box  {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:850px) {
+    .products_c_h_c {
+        .container_boxes {
+            width: 70%;
+        }
+    }
+}
+
+@media (min-width:950px) {
+    .products_c_h_c {
+        .title_products {
+            font-size: 30px;
+        }
+
+        .description_products {
+            max-width: 845px;
+        }
+    }
+}
+
+@media (min-width:1050px) {
+    .products_c_h_c {
+        .container_boxes {
+            width: 82%;
+            gap: 30px;
+            max-width: 950px;
+
+            .box {
+                padding: 42px 25px;
+                grid-template-columns: 1fr 1fr 1fr;
+                width: unset;
+                gap: 15px;
+
+                .img_container {
+                    align-self: center;
+                    width: 150px;
+                    height: 150px;
+                }
+
+                .text_box {
+                    gap: 27px;
+                    grid-column: 2 / 4;
+                    gap: 15px;
+
+                    .title_box {
+                        font-size: 18px;
+                    }
+
+                    .prices_box {
+                        p {
+                            span {
+                                font-size: 15px;
+                            }
+                        }
+                    }
+
+                    .btn_box {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1100px) {
+    .products_c_h_c {
+        .description_products {
+            font-size: 15px;
+        }
+    }
+}
+
+@media (min-width:1400px) {
+    .products_c_h_c {
+        .title_products {
+            font-size: 40px;
+        }
+
+        .description_products {
+            line-height: 25px;
+            margin-top: 30px;
+        }
+
+        .container_boxes {
+            margin-top: 70px;
+            max-width: 1200px;
+            gap: 50px 80px;
+
+            .box {
+                padding: 43px 35px;
+                .img_container {
+                    width: 180px;
+                    height: 180px;
+                }
+                .text_box {
+                    .title_box {
+                        font-size: 22px;
+                    }
+
+                    .prices_box {
+                        p {
+                            span {
+                                &:nth-child(3) {
+                                    font-size: 20px;
+                                }
+                            }
+                        }
+                    }
+
+                    .btn_box {
+                        height: 45px;
+                        font-size: 17px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:1600px) {
+    .products_c_h_c {
+        .title_products {
+            font-size: 50px;
+        }
+    }
+}
