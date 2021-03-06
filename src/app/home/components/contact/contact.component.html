@@ -1,0 +1,144 @@
+<div class="contact_c_h_c">
+  <div class="container">
+    <h1 class="title_contact">CONTACTANOS</h1>
+    <div class="data_box">
+      <h2 class="title_data_contact">DATOS DE CONTACTO</h2>
+      <div class="data_informacion">
+        <div class="line_data">
+          <div class="icon_line_data_contact">
+            <img src="assets/icons/email.svg" alt="" />
+          </div>
+          <p class="text_line_data_contact">correo@gmail.com</p>
+        </div>
+
+        <div class="line_data">
+          <div class="icon_line_data_contact">
+            <img src="assets/icons/home.svg" alt="" />
+          </div>
+          <p class="text_line_data_contact">A.S.A Coop. Villa el Sol M-9</p>
+        </div>
+
+        <div class="line_data">
+          <div class="icon_line_data_contact">
+            <img src="assets/icons/phone.svg" alt="" />
+          </div>
+          <p class="text_line_data_contact">+51 988 929 454</p>
+        </div>
+      </div>
+
+      <h2 class="title_data_contact">HORARIOS DE ATENCION</h2>
+
+      <div class="days_week">
+        <div class="line_data_week">
+          <span>Lunes</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Marter</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Miercoles</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Jueves</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Viernes</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Sabado</span>
+          <span>8:00 a 3:00</span>
+        </div>
+
+        <div class="line_data_week">
+          <span>Domingo</span>
+          <span>8:00 a 3:00</span>
+        </div>
+      </div>
+    </div>
+
+    <form
+      class="form"
+      [formGroup]="contactForm"
+      (ngSubmit)="sendMessage(contactForm.value)"
+    >
+      <div class="input_container">
+        <input
+          type="text"
+          placeholder="Nombre"
+          [formControlName]="'name'"
+          [ngClass]="{ error: name }"
+        />
+        <span class="message_error fadeIn" *ngIf="name">INGRESE UN NOMBRE</span>
+      </div>
+
+      <div class="input_container">
+        <input
+          type="text"
+          placeholder="Telefono"
+          [formControlName]="'phone'"
+          [ngClass]="{ error: phone }"
+        />
+        <span class="message_error fadeIn" *ngIf="phone"
+          >INGRESE UN TELEFONO</span
+        >
+      </div>
+
+      <div class="input_container">
+        <input
+          type="text"
+          placeholder="Asunto"
+          [formControlName]="'subject'"
+          [ngClass]="{ error: subject }"
+        />
+        <span class="message_error fadeIn" *ngIf="subject"
+          >INGRESE UN ASUNTO</span
+        >
+      </div>
+
+      <div class="input_container">
+        <input
+          type="text"
+          placeholder="Correo"
+          [formControlName]="'email'"
+          [ngClass]="{ error: email }"
+        />
+        <span class="message_error fadeIn" *ngIf="email"
+          >INGRESE UN CORREO</span
+        >
+      </div>
+
+      <div class="textarea_container">
+        <textarea
+          placeholder="Mensaje"
+          [formControlName]="'message'"
+          [ngClass]="{ error: message }"
+        ></textarea>
+        <span class="message_error fadeIn" *ngIf="message"
+          >INGRSE SU MENSAJE</span
+        >
+      </div>
+
+      <button type="submit" class="btn_send">ENVIAR</button>
+    </form>
+  </div>
+  <div class="map_container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d956.9880657003598!2d-71.5238801707725!3d-16.376393999293246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDIyJzM1LjAiUyA3McKwMzEnMjQuMCJX!5e0!3m2!1ses-419!2spe!4v1614991236143!5m2!1ses-419!2spe"
+      width="600"
+      height="450"
+      style="border: 0"
+      allowfullscreen=""
+      loading="lazy"
+    ></iframe>
+  </div>
+</div>
