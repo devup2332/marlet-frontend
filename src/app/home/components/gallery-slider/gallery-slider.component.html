@@ -1,0 +1,24 @@
+<div
+  class="gallery_slider_c_h_c"
+  [ngClass]="{ open: data?.status }"
+  #gallery_c
+>
+    <img
+      [src]="image.url"
+      class="image"
+      alt=""
+      [ngClass]="{ visible: i === data?.index }"
+      *ngFor="let image of imagesArray; index as i"
+    />
+  <div class="controls">
+    <button type="button" class="btn_slider_left">
+      <img src="assets/icons/arrow-left.svg" alt="" (click)="previewSlide()"/>
+    </button>
+    <button type="button" class="btn_slider_rigth" (click)="nextSlide()">
+      <img src="assets/icons/arrow-rigth.svg" alt="" />
+    </button>
+  </div>
+  <button class="btn_close" (click)="closeGallery()">
+    <img src="assets/icons/close.svg" alt="">
+  </button>
+</div>

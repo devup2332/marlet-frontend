@@ -9,10 +9,11 @@ import { GalleryImagesComponent } from './components/gallery-images/gallery-imag
 import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GallerySliderComponent } from './components/gallery-slider/gallery-slider.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, AboutComponent, GalleryImagesComponent, ProductsComponent, ContactComponent],
+  declarations: [HomeComponent, BannerComponent, AboutComponent, GalleryImagesComponent, ProductsComponent, ContactComponent, GallerySliderComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

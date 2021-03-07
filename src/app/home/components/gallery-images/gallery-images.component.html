@@ -1,55 +1,7 @@
 <div class="gallery_images_c_h_c">
-    <div class="image_container main">
-        <img src="assets/images/foto-5.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-1.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-2.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-3.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-4.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-6.jpg" alt="">
-        <div class="img_hover_text">
-            <img src="assets/icons/plus.svg" alt="">
-            <span>ABRIR</span>
-        </div>
-    </div>
-
-    <div class="image_container">
-        <img src="assets/images/foto-7.jpg" alt="">
-        <div class="img_hover_text">
+    <div class="image_container" *ngFor="let image of images;index as i" [ngClass]="{'main':image.status==='main'}">
+        <img [src]="image.url" alt="">
+        <div class="img_hover_text" (click)="openGallery(i)">
             <img src="assets/icons/plus.svg" alt="">
             <span>ABRIR</span>
         </div>

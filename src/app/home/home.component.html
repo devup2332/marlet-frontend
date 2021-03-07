@@ -7,8 +7,9 @@
             doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi</p>
     </div>
 </div>
-<app-gallery-images></app-gallery-images>
+<app-gallery-images (onOpenGallery)="openGallery($event)"></app-gallery-images>
 <div class="container_products_contact">
     <app-products></app-products>
     <app-contact></app-contact>
 </div>
+<app-gallery-slider [data]="data"></app-gallery-slider>
