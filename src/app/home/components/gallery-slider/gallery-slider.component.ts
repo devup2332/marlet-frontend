@@ -21,22 +21,35 @@ export class GallerySliderComponent implements OnInit {
 
   ngOnInit(): void {
     document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
+      if (e.key === 'Escape' && this.data) {
         this.closeGallery();
       }
     });
 
     document.addEventListener('click', (e) => {
-      if(e.target === this.Gallery.nativeElement) {
+      if(e.target === this.Gallery.nativeElement && this.data) {
         this.closeGallery();
       }
     })
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft' && this.data) {
+        this.previewSlide();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && this.data) {
+        this.nextSlide();
+      }
+    });
 
     this.imagesArray = data;
   }
 
   closeGallery() {
     this.data.status = false;
+    this.data = undefined;
     disableScroll.off();
   }
 

@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   data:any
+  product:any
 
   constructor() { }
 
@@ -16,6 +17,10 @@ export class HomeComponent implements OnInit {
 
   openGallery(dataGallery:any) {
     this.data = dataGallery
+  }
+
+  openModal(product:any) {
+    this.product = product
   }
 
 }

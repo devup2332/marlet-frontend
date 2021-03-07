@@ -10,14 +10,19 @@ import { ProductsComponent } from './components/products/products.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GallerySliderComponent } from './components/gallery-slider/gallery-slider.component';
-
+import { ModalProductsComponent } from './components/modal-products/modal-products.component';
 
 @NgModule({
-  declarations: [HomeComponent, BannerComponent, AboutComponent, GalleryImagesComponent, ProductsComponent, ContactComponent, GallerySliderComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    ReactiveFormsModule
-  ]
+  declarations: [
+    HomeComponent,
+    BannerComponent,
+    AboutComponent,
+    GalleryImagesComponent,
+    ProductsComponent,
+    ContactComponent,
+    ModalProductsComponent,
+    GallerySliderComponent,
+  ],
+  imports: [CommonModule, HomeRoutingModule, ReactiveFormsModule],
 })
-export class HomeModule { }
+export class HomeModule {}

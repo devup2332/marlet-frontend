@@ -4,7 +4,7 @@
     background: linear-gradient($color_4,#000000);
     padding-bottom: 20px;
 
-    .container {
+    .container_gallery_first_section {
         width: 90%;
         margin: auto;
         
@@ -38,7 +38,7 @@
 
 @media(min-width: 540px) {
     .container_about_and_gallery_title {
-        .container {
+        .container_gallery_first_section {
             width: 85%;
 
             .description_gallery {
@@ -57,7 +57,7 @@
 @media(min-width: 950px) {
     .container_about_and_gallery_title {
 
-        .container {
+        .container_gallery_first_section {
 
             .title_gallery {
                 font-size: 30px;
@@ -73,7 +73,7 @@
 @media(min-width: 1100px) {
     .container_about_and_gallery_title{
 
-        .container {
+        .container_gallery_first_section {
 
             .description_gallery {
                 font-size: 15px;
@@ -88,7 +88,7 @@
     .container_about_and_gallery_title {
         padding-bottom: 70px;
 
-        .container {
+        .container_gallery_first_section {
             width: 75%;
             max-width: 1200px;
 
@@ -102,7 +102,7 @@
 @media(min-width: 1600px) {
     .container_about_and_gallery_title {
         
-        .container {
+        .container_gallery_first_section {
             .title_gallery {
                 font-size: 50px;
             }

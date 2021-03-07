@@ -12,4 +12,9 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  scrollTo() {
+    const contact = document.querySelector('.contact_c_h_c');
+    contact.scrollIntoView();
+  }
+
 }

@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { ElementinwindowService } from '../../../shared/services/elementinwindow.service';
 
 @Component({
   selector: 'app-banner',
@@ -10,7 +11,7 @@ export class BannerComponent implements OnInit {
   bannerHTML: ElementRef<HTMLDivElement>;
   @ViewChild('nav', { static: true }) navHTML: ElementRef<HTMLDivElement>;
 
-  constructor() {}
+  constructor(private ElementinwindowService: ElementinwindowService) {}
 
   ngOnInit(): void {
     this.setLinksHeaderStyles();
@@ -18,45 +19,11 @@ export class BannerComponent implements OnInit {
   }
 
   setLinksHeaderStyles(): void {
-    const bannerHeight = this.bannerHTML.nativeElement.clientHeight;
+    const options = this.navHTML.nativeElement.children[0].children;
 
-    if (
-      document.documentElement.scrollTop >= 0 &&
-      document.documentElement.scrollTop < bannerHeight
-    ) {
-      this.navHTML.nativeElement.children[0].children[0].classList.add(
-        'active'
-      );
-    }
-
+    this.ElementinwindowService.onScreen(options);
     document.addEventListener('scroll', () => {
-      const bannerHeight = this.bannerHTML.nativeElement.clientHeight;
-      const aboutHeight = document.querySelector('.about_c_h_c').clientHeight;
-      if (
-        document.documentElement.scrollTop >= 0 &&
-        document.documentElement.scrollTop < bannerHeight - 200
-      ) {
-        for (let i = 0; i < 4; i++) {
-          this.navHTML.nativeElement.children[0].children[i].classList.remove(
-            'active'
-          );
-        }
-        this.navHTML.nativeElement.children[0].children[0].classList.add(
-          'active'
-        );
-      } else if (
-        document.documentElement.scrollTop >= bannerHeight - 200 &&
-        document.documentElement.scrollTop < aboutHeight + bannerHeight
-      ) {
-        for (let i = 0; i < 4; i++) {
-          this.navHTML.nativeElement.children[0].children[i].classList.remove(
-            'active'
-          );
-        }
-        this.navHTML.nativeElement.children[0].children[1].classList.add(
-          'active'
-        );
-      }
+      this.ElementinwindowService.onScreen(options);
     });
   }
 
@@ -95,5 +62,10 @@ export class BannerComponent implements OnInit {
         nav.classList.remove('visible');
       }
     });
+  }
+
+  scrollTo(section: string) {
+    const block = document.querySelector(section);
+    block.scrollIntoView();
   }
 }

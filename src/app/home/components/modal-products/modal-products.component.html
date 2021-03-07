@@ -1,0 +1,16 @@
+<div class="modal_products_container" [ngClass]="{'open':product?.status}" #modal_container>
+    <div class="modal">
+        <img class="image_modal" [src]="product?.image" alt="">
+        <div class="text_modal_container">
+            <h2 class="title_modal">TORTA DE CHOCOLATE</h2>
+            <p class="description_modal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+            <div class="prices_modal">
+                <p><span>Por Mayor</span> <span>=</span> <span class="number">S/. 30.00</span></p>
+                <p><span>Por Mayor</span> <span>=</span> <span class="number">S/. 20.00</span></p>
+            </div>
+        </div>
+    </div>
+    <button class="btn_close" (click)="closeModal()">
+        <img src="assets/icons/close.svg" alt="">
+    </button>
+</div>
